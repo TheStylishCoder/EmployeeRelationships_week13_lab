@@ -13,7 +13,7 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long departmentId;
+    private Long id;
     @Column(name = "name")
     private String name;
     @JsonIgnoreProperties({"department"})
@@ -22,19 +22,19 @@ public class Department {
 
     public Department(String name) {
         this.name = name;
-        this.employees = new ArrayList<Employee>();
+        this.employees = new ArrayList<>();
     }
 
     public Department(){
 
     }
 
-    public Long getDepartmentId() {
-        return departmentId;
+    public Long getId() {
+        return id;
     }
 
-    public void setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

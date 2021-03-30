@@ -8,8 +8,8 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "employeeId")
-    private Long employeeId;
+    @Column(name = "id")
+    private Long id;
     @Column(name = "first_name")
     private String first_name;
     @Column(name = "last_name")
@@ -20,21 +20,22 @@ public class Employee {
 //    private List<Project> projects;
 
 
-    public Employee(String first_name, String last_name) {
+    public Employee(String first_name, String last_name, Department department) {
         this.first_name = first_name;
         this.last_name = last_name;
+        this.department = department;
     }
 
     public Employee(){
 
     }
 
-    public Long getEmployeeId() {
-        return employeeId;
+    public Long getId() {
+        return id;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirst_name() {
@@ -51,5 +52,13 @@ public class Employee {
 
     public void setLast_name(String last_name) {
         this.last_name = last_name;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }
