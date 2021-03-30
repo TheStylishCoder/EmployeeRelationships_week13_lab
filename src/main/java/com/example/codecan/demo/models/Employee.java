@@ -14,7 +14,9 @@ public class Employee {
     private String first_name;
     @Column(name = "last_name")
     private String last_name;
-//    private Department department;
+    @ManyToOne
+    @JoinColumn(name = "department_id", nullable = false)
+    private Department department;
 //    private List<Project> projects;
 
 
